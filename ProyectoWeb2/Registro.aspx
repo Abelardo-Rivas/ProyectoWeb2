@@ -35,6 +35,8 @@
         <form id="form1" runat="server">
 
                 <center>
+                    <b><asp:Label id="Label3" Text="" runat="server" /></b><br>
+
                      Código: 
                 <asp:TextBox id="Código" Text="" runat="server" />
                 <br/><br />
@@ -43,17 +45,17 @@
                  <asp:TextBox id="TextBox1" Text="" runat="server" />
                 <br/><br />
 
-                    Usuario:
+                 Usuario:
                      <asp:TextBox id="Usuario" Text="" runat="server" />
                 <br/><br />
 
-                    Contraseña:
+                 Contraseña:
                      <asp:TextBox id="password" Text="" runat="server" />
                 <br/><br />
 
                     <asp:Button id="enviar" Text="Registrar" runat="server" /></center>
 
-                   </form>
+          </form>
         </div>
   
  </body>

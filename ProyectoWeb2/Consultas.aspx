@@ -33,13 +33,55 @@
     <div class="log">
         <center>Ver usuarios</center>
     <form id="form1" runat="server">
+   
+        <form id="form3" runat="server">
 
+    <center>
+  
+    
+        Código:
+    <asp:TextBox id="idm" Text="" runat="server" />
+    <br /><br />
+    
+    Nombre:
+    <asp:TextBox id="nombrem" Text="" runat="server" />
+    <br />
 
-            <center>
-                Consultar:
+    Usuario:
+    <asp:TextBox id="usuariom" Text="" runat="server" />
+    <br />
+
+    Contraseña:
+    <asp:TextBox id="passwordm" Text="" runat="server" />
+    <br /><br />
+
+    Contraseña:
+    <asp:TextBox id="rangom" Text="" runat="server" />
+    <br /><br />
+
+         Consultar:
                 <asp:Button id="enviar" Text="Ver usuarios" runat="server" />
-            </center>
+    </center>
+             <div>
+            <asp:ScriptManager id="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel id="UpdatePanel1" UpdateMode="Conditional" runat="server">
+                <ContentTemplate>
+                    <asp:GridView ID="GVConsultar" runat="server"  AutoGenerateColumns="False"  >
+                        <Columns>
+                            <asp:BoundField HeaderText="Id" DataField="Id"/>
+                            <asp:BoundField HeaderText="Codigo" DataField="Codigo"/>
+                            <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>
+                            <asp:BoundField HeaderText="Usuario" DataField="Usuario"/>
+                            <asp:BoundField HeaderText="Contraseña" DataField="Contraseña"/>
+                            <asp:BoundField HeaderText="Rango" DataField="Rango"/>
+                        </Columns>
+                    </asp:GridView>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        
 
+           
         </form>
    </div>
     

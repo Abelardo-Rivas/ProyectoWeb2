@@ -10,7 +10,7 @@ using System.Data;
 
 namespace ProyectoWeb2
 {
-    public partial class Consultas : System.Web.UI.Page
+    public partial class consulta2 : System.Web.UI.Page
     {
         MySqlConnection con = new MySqlConnection(@"Data Source=localhost;port=3306;Initial Catalog=proyecto;User Id=root;password=''");
         protected void Page_Load(object sender, EventArgs e)
@@ -18,21 +18,13 @@ namespace ProyectoWeb2
 
         }
 
-        protected void enviar_Click(object sender, EventArgs e)
+        protected void enviar3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void enviar2_Click(object sender, EventArgs e)
-        {
-
             DataTable registros = new DataTable();
             registros.Columns.AddRange(new DataColumn[] {
-                new DataColumn("Id",typeof(string)),
+
                 new DataColumn("Codigo",typeof(string)),
                 new DataColumn("Nombre",typeof(string)),
-                new DataColumn("Usuario",typeof(string)),
-                new DataColumn("Contraseña",typeof(string)),
                 new DataColumn("Rango",typeof(string)),
 
 
@@ -51,11 +43,9 @@ namespace ProyectoWeb2
                 while (dr.Read())
                 {
                     registros.Rows.Add(
-                        dr["Id"].ToString(),
+
                         dr["Código"].ToString(),
                         dr["Nombre"].ToString(),
-                        dr["Usuario"].ToString(),
-                        dr["Contraseña"].ToString(),
                         dr["Rango"].ToString()
                         );
                 }
@@ -63,8 +53,9 @@ namespace ProyectoWeb2
 
             con.Close();
 
-            GVConsultar.DataSource = registros;
-            GVConsultar.DataBind();
+            GVConsultar2.DataSource = registros;
+            GVConsultar2.DataBind();
+
         }
     }
 }
